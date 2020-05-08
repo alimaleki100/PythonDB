@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+
+@author: alimaleki100
+"""
+## Read dataframe from postgres table
+import pandas as pd
+from sqlalchemy import create_engine
+
+
+engine = create_engine('postgresql://user:PWD@SERVERNAME/DBName')
+df = pd.read_sql_table('TblName',engine)
+
+
+
