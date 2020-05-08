@@ -10,7 +10,7 @@ df = pd.read_excel('file Address')
 #df.columns = [c.lower() for c in df.columns] #postgres doesn't like capitals or spaces
 
 from sqlalchemy import create_engine
-engine = create_engine('postgresql://user:PWD@SERVERNAME:Port#(5432)/DBName')
+engine = create_engine('postgresql://user:PWD@SERVERNAME/DBName')
 
 df.to_sql("TBLName", engine,if_exists='append')
 
